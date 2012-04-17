@@ -1,19 +1,21 @@
 #!/bin/bash
 
-echo 'Alustame skripti kirjutamist'
+echo 'Script starts'
 if [ $UID -ne 0  ]; then
-   echo 'ole hea ja mine root kasutajaks'
+   echo 'Please login as root'
    exit 1
 else 
-   echo 'oled root'
+   echo 'Youre root'
 fi 
-echo 'uuendame'
+echo 'Check for updates'
 apt-get update 
-echo 'paigaldame uuendused'
+echo 'Install updates'
 apt-get upgrade
-echo 'Koristame ära ffmpeg ja x264'
+echo 'Install git'
+apt-get install git
+echo 'Removing ffmpeg and x264'
 apt-get remove ffmpeg x264 libx264-dev  
-echo 'Paigaldame vajalikud sõltuvused'
+echo 'Install dependencies'
 sudo apt-get install build-essential libgtk2.0-0 libgtk2.0-dev gtk2-engines-pixbuf \
 libjpeg-dev libtiff4-dev libjasper-dev libopenexr-dev cmake cmake-qt-gui python-dev \
 python-numpy python-sphinx libtbb-dev libeigen2-dev yasm libmp3lame-dev libfaac-dev \
@@ -24,9 +26,9 @@ libsdl1.2-dev libva-dev libvdpau-dev libx11-dev libxfixes-dev texi2html zlib1g-d
 libgstreamer0.10-0 libgstreamer0.10-dev gstreamer0.10-tools \
 gstreamer0.10-plugins-base libgstreamer-plugins-base0.10-dev \
 gstreamer0.10-plugins-good gstreamer0.10-plugins-ugly gstreamer0.10-plugins-bad \
-gstreamer0.10-ffmpeg libv4l-dev git -y  
+gstreamer0.10-ffmpeg libv4l-dev -y  
 sleep 5 
-echo 'tekitame kasusta opencv'
+echo 'Create directory called opencv'
 mkdir ~/opencv
 cd ~/opencv
 git clone git://git.videolan.org/x264.git
