@@ -10,7 +10,7 @@ fi
 echo 'Check for updates'
 apt-get update 
 echo 'Install updates'
-apt-get upgrade
+apt-get upgrade -y
 echo 'Install git'
 apt-get install git
 echo 'Removing ffmpeg and x264'
