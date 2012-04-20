@@ -58,7 +58,7 @@ sudo make install
 echo '/usr/local/lib' >> /etc/ld.so.conf.d/opencv.conf 
 echo 'PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig export PKG_CONFIG_PATH' >> /etc/bash.bashrc
 sudo ldconfig
-echo 'Kas tahad teha rebooti' 
+echo 'do you wanna restart' 
 read BOOT
 if [ $BOOT = 'y' || $BOOT = 'Y' ]; then  
    reboot 
