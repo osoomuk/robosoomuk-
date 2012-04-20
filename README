@@ -5,12 +5,12 @@ sudo -i
 #Check for updates with command 
 apt-get update 
 #Install updates if any 
-apt-get ugrade -y 
+apt-get upgrade -y 
 #Install git package 
 apt-get install git -y 
 #Clone installation script from github, use command   
 git clone git://github.com/osoomuk/robosoomuk-.git 
 #After that go to create directory robosoomuk
-cd robosoomuk 
+cd robosoomuk- 
 #Execute OpenCV installation script 
 bash install.sh  
