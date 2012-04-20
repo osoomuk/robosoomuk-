@@ -1,1 +1,16 @@
 Uploaded files help you install OpenCV on Ubuntu 12.04.
+To install Opencv to your computer
+#Login in as a root
+sudo -i 
+#Check for updates with command 
+apt-get update 
+#Install updates if any 
+apt-get ugrade -y 
+#Install git package 
+apt-get install git -y 
+#Clone installation script from github, use command   
+git clone git://github.com/osoomuk/robosoomuk-.git 
+#After that go to create directory robosoomuk
+cd robosoomuk 
+#Execute OpenCV installation script 
+bash install.sh  
