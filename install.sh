@@ -60,7 +60,7 @@ echo 'PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig export PKG_CONFI
 sudo ldconfig
 echo 'do you wanna restart' 
 read BOOT
-if [ $BOOT = 'y' || $BOOT = 'Y' ]; then  
+if [ $BOOT = 'y' ] || [ $BOOT = 'Y' ]; then  
    reboot 
 fi 
 
