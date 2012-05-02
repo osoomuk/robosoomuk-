@@ -8,11 +8,13 @@ else
    echo 'Youre root'
 fi 
 echo 'Check for updates'
-apt-get update 
+apt-get update  
 echo 'Install updates'
 apt-get upgrade -y
 echo 'Install git'
-apt-get install git
+apt-get install git -y
+echo 'Install svn'
+apt-get install subversion -y  
 echo 'Removing ffmpeg and x264'
 apt-get remove ffmpeg x264 libx264-dev  
 echo 'Install dependencies'
