@@ -7,6 +7,6 @@ if [ $UID -ne 0 ]; then
 fi  
 while read line; 
 do
-   apt-get remove --purge $line; 
+   apt-get remove $line; 
 done < list.txt
 
