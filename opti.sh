@@ -18,8 +18,7 @@ ubuntuone-installer
 update-manager 
 update-notifier
 oneconf
-libubuntuone-1.0-1 
-libubuntuone1.0-cil -y 
+libubuntuone-1.0-1 -y 
 
 echo 'Service configuration'
 chk=`/usr/bin/apt-cache policy chkconfig | grep Installed | awk '{print $2}'`
