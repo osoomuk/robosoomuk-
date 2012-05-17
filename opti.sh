@@ -34,6 +34,7 @@ fi
 echo 'Disable services'
 chkconfig bluetooth off
 chkconfig cron off 
+chkconfig pulseaudio off
 
 echo 'Startup processes deactivating'
 cd /etc/xdg/autostart/
