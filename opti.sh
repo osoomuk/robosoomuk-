@@ -19,7 +19,7 @@ echo 'Disable services'
 while read line
 do
    mv /etc/init/$line.conf /etc/init/$line.conf.disabled
-done > service.txt 
+done < service.txt 
 
 
 echo 'Startup processes deactivating'
