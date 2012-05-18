@@ -5,21 +5,6 @@ if [ $UID -ne 0 ]; then
    exit 1
 fi  
 
-echo 'Removing some packages which are not useful and using some resources'
-apt-get remove --purge python-ubuntuone-client
-python-ubuntuone-control-panel 
-python-ubuntuone-storageprotocol 
-ubuntuone-client 
-ubuntuone-client-gnome 
-ubuntuone-control-panel 
-ubuntuone-control-panel-gtk 
-ubuntuone-couch 
-ubuntuone-installer 
-update-manager 
-update-notifier
-oneconf
-libubuntuone-1.0-1 -y 
-
 echo 'Service configuration'
 chk=`/usr/bin/apt-cache policy chkconfig | grep Installed | awk '{print $2}'`
  
