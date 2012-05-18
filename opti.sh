@@ -25,14 +25,17 @@ chk=`/usr/bin/apt-cache policy chkconfig | grep Installed | awk '{print $2}'`
  
 echo 'Checking package status.'
  
-if [ $SSH == '(none)' ]; then 
+if [ $chk == '(none)' ]; then 
     apt-get install chkconfig -y 
 else 
     echo 'Package is already installed.'    
 fi
 echo 'Disable services'
-chkconfig bluetooth off
-chkconfig cron off 
+while read line
+do
+   mv /etc/init/$line.conf /etc/init/$line.conf.disabled
+done > service.txt 
+
 
 echo 'Startup processes deactivating'
 cd /etc/xdg/autostart/
