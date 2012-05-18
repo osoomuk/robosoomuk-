@@ -9,7 +9,7 @@ fi
 echo 'Taking out some not needed packages'
 while read line; do 
        echo $line
-       apt-get remove --purge $line 
+       apt-get remove --purge $line -y 
 done > list.txt 
 echo 'Uninstall completed'
 exit 1
