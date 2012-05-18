@@ -3,4 +3,8 @@ cups
 whoopise
 cron
 anacron 
-
+tty2
+tty3
+tty4
+tty5
+tty6
